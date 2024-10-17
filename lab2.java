@@ -1,4 +1,4 @@
-// Student Database program;
+// Lab2: Student Database program;
 
 import java.util.Scanner;
 
