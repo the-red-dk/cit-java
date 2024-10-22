@@ -1,42 +1,51 @@
-// Lab2: Student Database program;
-
 import java.util.Scanner;
 
+
 class Student {
-        String usn;
-        String name;
-        String phone;
-        String branch;
+    String usn, name, branch, phone;
 
-        void setdata() {
+    Scanner s = new Scanner(System.in);
+    void setdata() {   
 
-            Scanner s = new Scanner(System.in);
-            System.out.println("Enter the student USN: ");
-            usn = s.next();
+        System.out.println("USN: ");
+        usn = s.next();
+        
+        System.out.println("Enter Student Name: ");
+        name = s.next();
 
-            System.out.println("Enter the student name: ");
-            name = s.next();
+        System.out.println("Enter Phone: ");
+        phone = s.next();
 
-            System.out.println("Enter branch: ");
-            branch = s.next();
+        System.out.println("Enter branch: ");
+        branch = s.next();
+    }
 
-            System.out.println("Enter phone number: ");
-            phone = s.next();
-        }
-
-        void getdata() {
-            System.out.println("-------------Student Details-------------");
-            System.out.println("USN: " + usn + "\tName: " + name + "\tBranch: " + branch + "\tPhone: " + phone);
-            // "\t" are optional, you can just use spaces instead
+    void getdata() {
+        System.out.println("USN: " + usn + " | Name: " + name + " | Phone: " + phone + " | Branch: " + branch + "\n");
     }
 }
 
 public class lab2 {
+    
     public static void main(String[] args) {
 
-        Student s1 = new Student();
+        Scanner s = new Scanner(System.in);
 
-        s1.setdata();
-        s1.getdata();
+        System.out.println("Enter number of Students: ");
+        int n = s.nextInt();
+
+        Student[] s1 = new Student[n];
+
+        for(int i = 0; i < n; i++) {
+            s1[i] = new Student();
+        }
+
+        for(int i = 0; i < n; i++) {
+            s1[i].setdata();
+        }
+
+        for(int i = 0; i < n; i++) {
+            s1[i].getdata();
+        }
     }
 }
