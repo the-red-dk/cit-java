@@ -558,20 +558,20 @@ video {
   margin: 1rem;
 }
 
-.ml-5 {
-  margin-left: 1.25rem;
-}
-
-.mt-20 {
-  margin-top: 5rem;
-}
-
 .ml-4 {
   margin-left: 1rem;
 }
 
+.ml-5 {
+  margin-left: 1.25rem;
+}
+
 .ml-6 {
   margin-left: 1.5rem;
+}
+
+.mt-20 {
+  margin-top: 5rem;
 }
 
 .text-center {
@@ -586,11 +586,6 @@ video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
-}
-
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
 }
 
 body {
