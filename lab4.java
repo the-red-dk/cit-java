@@ -40,7 +40,7 @@ class BoxW extends Box {
     }   //Default
 
     BoxW(double l, double w, double h, double wt) {
-        super(l, h, w);
+        super(l, w, h);
         weight = wt;
     }   //Parameterised
 
@@ -67,6 +67,17 @@ class Shipment extends BoxW {
         super(l, w, h, wt);
         cost = c;
     }
+
+    Shipment(Shipment ob) {
+        super(ob);
+        cost = ob.cost;
+    }
+
+
+    Shipment (double l, double wt, double c) {
+        super(l, wt);
+        cost = c;
+    }
 }
 
 public class lab4 {
@@ -81,7 +92,7 @@ public class lab4 {
         System.out.println("Volume of Shipment 1 is: " + vol);
         System.out.println("Weight of Shipment 1 is: " + s1.weight);
         System.out.println("Shipping Cost of Shipment1 is: " + s1.cost);
-        vol = s1.volume();
+        vol = s2.volume();
         System.out.println("Volume of Shipment 2 is: " + vol);
         System.out.println("Weight of Shipment 2 is: " + s2.weight);
         System.out.println("Shipping Cost of Shipment2 is: " + s2.cost);
